@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;700;900&display=swap");
+@import "src/assets/scss/colors.scss";
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: $lightPlatinum;
+  font-family: "Lato", sans-serif;
+
+  color: $white;
+}
+
+.btn-default {
+  background-color: transparent;
+  color: $white;
+}
+
+#root {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.row {
+  width: 100%;
+}
+
+select {
+  padding: 0.8em;
+  background-color: $lightDark;
+  border-radius: 0.5em;
+  color: $white;
+}
+
+.gallery {
+  .delete-icon {
+    cursor: pointer;
+    padding: 0.1em;
+    border-radius: 50%;
+    &:hover {
+      svg {
+        color: $red;
+      }
+    }
+  }
+  .copy-icon {
+    cursor: pointer;
+    padding: 0.1em;
+    border-radius: 50%;
+    &:hover {
+      svg {
+        color: $lightBlue;
+      }
+    }
+  }
+  .card {
+    cursor: pointer;
+    &:hover {
+      outline: 2px solid $lightBlue;
+    }
+  }
+}
+
+.add-photo {
+  label {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid $white;
+    cursor: pointer;
+    border-radius: 1em;
+  }
+
+  .preview-wrapper {
+    height: 500px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.subject-title-wrapper {
+  overflow-x: auto;
+  text-align: center;
+  padding: 1em;
+  @media screen and (max-width: 980px) {
+    .row {
+      width: 768px;
+    }
+  }
+}
+
+.card-subject {
+  cursor: pointer;
+  padding: 1.5em 0;
+  background-color: $lightDark;
+  border-radius: 10px;
+  box-shadow: 0 0 2px $lightWhite;
+  &.active,
+  &:hover {
+    background-color: $lightBlue;
+    color: $white;
+  }
+}
+
+.card {
+  background-color: $lightDark;
+  box-shadow: 0 0 2px $lightWhite;
+}
+
+.rdw-editor-toolbar {
+  background: transparent;
+  color: $lightPlatinum;
+}
+
+.rdw-image-imagewrapper {
+  img {
+    width: 100% !important;
+    height: 300px !important;
+  }
+}
+
+.editorClassName {
+  border: 1px solid #f1f1f1 !important;
+  height: 80% !important;
+}
+
+a.rdw-dropdown-selectedtext {
+  text-decoration: none;
+}
+
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 642px;
+    margin: 1.75rem auto;
+  }
+}
+
+.modal-content {
+  background-color: $lightPlatinum;
+
+  .modal-header {
+    .btn-close {
+      background: transparent
+        url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3e%3c/svg%3e")
+        center/1em auto no-repeat;
+    }
+  }
+}
+
+input.form-control,
+input.form-control:focus,
+textarea.form-control,
+textarea.form-control:focus {
+  background: $lightDark;
+  color: $white;
+}
+
+.form-control:disabled, .form-control[readonly] {
+  background: $lightDark;
+  color: $white;
+}
+
+.required-label {
+  color: $red;
+  font-weight: bold;
+}

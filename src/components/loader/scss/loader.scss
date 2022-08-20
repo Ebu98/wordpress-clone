@@ -1,0 +1,28 @@
+@import 'src/assets/scss/colors.scss';
+
+.loader-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+  .spinner {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    animation: loader-box 0.8s linear infinite;
+    border: 8px solid transparent;
+    border-top: 8px solid $lightBlue;
+    border-bottom: 8px solid $lightBlue;
+    border-radius: 50%;
+  }
+}
+
+@keyframes loader-box {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

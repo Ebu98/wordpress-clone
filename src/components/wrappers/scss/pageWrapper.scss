@@ -1,0 +1,14 @@
+@import 'src/assets/scss/colors.scss';
+
+.page-wrapper {
+  background-color: $lightDark;
+  box-shadow: 0 0 2px $lightWhite;
+  transition: all 0.5s linear;
+  padding: 0.5em 0;
+
+  &.close-nav {
+    margin: auto 2em;
+    transition: all 0.5s linear;
+    padding: 0 0.5em;
+  }
+}
